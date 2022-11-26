@@ -61,8 +61,6 @@ function polling() {
 
         $('#grid').append('<div class="row"><table id="grid_table"></table></div>');
 
-        console.log(obj.rows.length);
-
         for ( var row = 0; row < obj.rows.length; row++ ) {
 
             var classes = "row border-3"
@@ -82,8 +80,6 @@ function polling() {
             for ( var column = 0; column < obj.rows[row].columns.length; column ++ ) {
 
                 // @todo - fix up the spiral display
-                //$('#'+row).append('<div class="col justify-content-center text-center spiral bg-secondary text-white" >' + obj.rows[row].columns[column].qty + '</div>');
-                //$('#'+row).append('<div class="col p-0 justify-content-center text-center bg-secondary text-white" ><span class="border border-info rounded-circle d-inline-block m-1" style="width:25px; height:25px;"><span class="border border-info rounded-circle d-inline-block m-0" style="width:10px; height:10px;"></span></span><span class="spiral d-inline-block m-1">' + obj.rows[row].columns[column].qty + '</span></div>');
                 $('#'+row).append('<div class="col p-0 justify-content-center text-center bg-dark text-white" ><span class="spiral-spinner border border-info rounded-circle d-inline-block m-1" style="width:25px; height:25px;"></span><span class="spiral d-inline-block m-1">' + obj.rows[row].columns[column].qty + '</span></div>');
 
             }
