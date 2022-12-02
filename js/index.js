@@ -2,10 +2,18 @@ $('document').ready(function(){
     $('form').submit(function(event){
 
         event.preventDefault();
+        
+        var payload;
+        
+        if (event.currentTarget[1].value == "Submit") {
+            payload = event.currentTarget[0].value
+        } else {
+            payload = event.currentTarget[1].value + event.currentTarget[0].value
+        }
 
         $.post({
             url: "submit.php",
-            data: { payload : event.currentTarget[1].value + event.currentTarget[0].value }
+            data: { payload : payload }
         })
 
     });
