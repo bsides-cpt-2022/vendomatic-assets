@@ -3,13 +3,9 @@ $('document').ready(function(){
 
         event.preventDefault();
 
-        var data = { action : $('#action').val(), type : $('#selection').val(), value : $('#value').val() }
-
-        var payload = toHex(JSON.stringify(data));
-
         $.post({
             url: "submit.php",
-            data: {payload : payload}
+            data: { payload : event.currentTarget[1].value + event.currentTarget[0].value }
         })
 
     });
