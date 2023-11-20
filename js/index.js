@@ -1,24 +1,3 @@
-$('document').ready(function(){
-    $('form').submit(function(event){
-
-        event.preventDefault();
-        
-        var payload;
-        
-        if (event.originalEvent.submitter.innerText != "Logout" && event.currentTarget[1].value == "Submit") {
-            payload = event.currentTarget[0].value
-        } else {
-            payload = event.currentTarget[1].value + event.currentTarget[0].value
-        }
-
-        $.post({
-            url: "submit.php",
-            data: { payload : payload }
-        })
-
-    });
-});
-
 // thank you https://stackoverflow.com/questions/21647928/javascript-unicode-string-to-hex
 function fromHex(hex) {
     var convertedString;
