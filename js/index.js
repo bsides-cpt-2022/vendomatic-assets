@@ -5,7 +5,7 @@ $('document').ready(function(){
         
         var payload;
         
-        if (event.currentTarget[1].value == "Submit") {
+        if (event.originalEvent.submitter.innerText != "Logout" && event.currentTarget[1].value == "Submit") {
             payload = event.currentTarget[0].value
         } else {
             payload = event.currentTarget[1].value + event.currentTarget[0].value
