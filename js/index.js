@@ -63,7 +63,7 @@ function polling() {
             for ( var column = 0; column < obj.rows[row].columns.length; column ++ ) {
 
                 // @todo - fix up the spiral display
-                $('#'+row).append('<div class="col p-0 justify-content-center text-center bg-dark text-white" ><span class="spiral-spinner border border-info rounded-circle d-inline-block m-1" style="width:25px; height:25px;"></span><span class="spiral d-inline-block m-1">' + obj.rows[row].columns[column].qty + '</span></div>');
+                $('#'+row).append('<div style="width: 140px;" class="col p-0 justify-content-center text-center bg-dark text-white" ><span class="spiral-spinner border border-info rounded-circle d-inline-block m-1" style="width:25px; height:25px;"></span><span class="spiral d-inline-block m-1">' + obj.rows[row].columns[column].qty + '</span></div>');
 
             }
 
