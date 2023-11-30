@@ -42,7 +42,7 @@ function polling() {
 
         $('#grid').html("");
 
-        $('#grid').append('<div class="row"><table id="grid_table"></table></div>');
+        $('#grid').append('<div class="row" style="width: 500px;"><table id="grid_table"></table></div>');
 
         for ( var row = 0; row < obj.rows.length; row++ ) {
 
