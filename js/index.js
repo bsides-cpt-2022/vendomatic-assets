@@ -48,12 +48,10 @@ function polling() {
 
             var classes = "row border-3"
 
-            if (row == 0) {
-                classes += " border-top border-start border-end";
-            } else if (row == (obj.rows.length - 1)) {
+            if (row == (obj.rows.length - 1)) {
                 classes += " border-bottom border-start border-end";
             } else {
-                classes += " border-start border-end";
+                classes += " border-top border-start border-end";
             }
 
             classes += " border-danger";
