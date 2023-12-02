@@ -25,7 +25,7 @@ function toHex(str) {
     return convertedHex;
 }
 
-function submit() {
+function xor() {
     const key = 12341234;
     const payload = Number($('#payload').val());
     
@@ -91,3 +91,12 @@ function polling() {
 }
 
 polling();
+
+$( document ).ready(function() {
+    $( "#click" ).on( "click", function() {
+        xor();
+        $( "#submit" ).trigger( "submit" );
+    });
+});
+
+
