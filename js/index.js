@@ -85,7 +85,7 @@ function polling() {
 polling();
 
 function submit() {
-    const key 12341234;
+    const key = 12341234;
     const payload = Number($('#payload').val());
     
     // @todo - make sure to change to vending key.
