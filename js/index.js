@@ -26,11 +26,11 @@ function toHex(str) {
 }
 
 function xor() {
-    const key = 12341234;
-    const payload = Number($('#payload').val());
+    const key = 0x12341234;
+    const payload = parseInt($('#payload').val());
     
     // @todo - make sure to change to vending key.
-    $('#payload').val(key ^ payload)
+    $('#payload').val(`0x${((payload ^ key) >>> 0).toString(16)}`)
 }
 
 function polling() {
