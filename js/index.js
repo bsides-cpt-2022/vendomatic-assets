@@ -25,6 +25,14 @@ function toHex(str) {
     return convertedHex;
 }
 
+function submit() {
+    const key = 12341234;
+    const payload = Number($('#payload').val());
+    
+    // @todo - make sure to change to vending key.
+    $('#payload').val(key ^ payload)
+}
+
 function polling() {
     $.ajax({
         url: "poll.php",
@@ -83,11 +91,3 @@ function polling() {
 }
 
 polling();
-
-function submit() {
-    const key = 12341234;
-    const payload = Number($('#payload').val());
-    
-    // @todo - make sure to change to vending key.
-    $('#payload').val(key ^ payload)
-}
